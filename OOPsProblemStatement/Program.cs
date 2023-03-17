@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using OOPsProblemStatement.InventoryDataManagement;
 using OOPsProblemStatement.InventoryManagement;
+using OOPsProblemStatement.StockAccountManagement;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +14,7 @@ namespace OOPsProblemStatement
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.InventoryOperation\n2.InventoryDM\n3.AddInventory\n4.EditInventory\n5.DeleteInventory");
+                Console.WriteLine("1.InventoryOperation\n2.InventoryDM\n3.AddInventory\n4.EditInventory\n5.DeleteInventory\n6.StockCalculation");
                 Console.WriteLine("select option to print");
                 int option=Convert.ToInt32(Console.ReadLine()); 
                 switch(option)
@@ -40,6 +41,10 @@ namespace OOPsProblemStatement
                         InventoryDM inventoryDM3 = new InventoryDM();
                         inventoryDM3.ReadJsonFile(@"F:\InventoryDataManagementProblem\OOPsProblemStatement\InventoryManagement\InventoryDetails.json");
                         inventoryDM3.DeleteInventory();
+                        break;
+                    case 6:
+                        StockCalculation stock=new StockCalculation();
+                        stock.ReadJsonfile(@"F:\InventoryDataManagementProblem\OOPsProblemStatement\StockAccountManagement\Stock.json");
                         break;
                 }
             }

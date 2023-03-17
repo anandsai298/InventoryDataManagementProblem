@@ -1,0 +1,12 @@
+[
+  {
+    "StockName": "Amazon",
+    "NumberOfShares": "5",
+    "SharePrice": "100"
+  },
+  {
+    "StockName": "Tata",
+    "NumberOfShares": "10",
+    "SharePrice": "200"
+  }
+]
