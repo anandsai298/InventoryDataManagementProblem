@@ -20,7 +20,7 @@ namespace OOPsProblemStatement.InventoryManagement
             var result = JsonConvert.DeserializeObject<InventoryList>(data);
             riceList = result.RiceList;
             Display(riceList);
-           wheatList = result.WheatList;
+            wheatList = result.WheatList;
             Display(wheatList);
             pulsesList = result.PulsesList;
             Display(pulsesList);
@@ -49,6 +49,57 @@ namespace OOPsProblemStatement.InventoryManagement
                 pulsesList.Add(data);
                 Display(pulsesList);
             }
+        }
+        public void EditInventory()
+        {
+            Console.WriteLine("edit using name");
+            string name= Console.ReadLine();
+            Console.WriteLine("Edit Inventory data");
+            InventoryData data = new InventoryData();
+            data.Name = Console.ReadLine();
+            data.Weight = Convert.ToDouble(Console.ReadLine());
+            data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+            if (name.Equals(data.Name))
+            {
+                data.Name = Console.ReadLine();
+                data.Weight = Convert.ToDouble(Console.ReadLine());
+                data.PricePerKg= Convert.ToDouble(Console.ReadLine());
+            }
+        }
+        public void DeleteInventory()
+        {
+            Console.WriteLine("Delete using name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Delete Inventory data");
+            InventoryData data = new InventoryData();
+            data.Name = Console.ReadLine();
+            foreach (var inventory in riceList)
+            {
+                if (name.Equals(data.Name))
+                {
+                    data = inventory;
+                }
+            }
+            riceList.Remove(data);
+            Display(riceList);
+            foreach (var inventory in wheatList)
+            {
+                if (name.Equals(data.Name))
+                {
+                    data = inventory;
+                }
+            }
+            wheatList.Remove(data);
+            Display(wheatList);
+            foreach (var inventory in pulsesList)
+            {
+                if (name.Equals(data.Name))
+                {
+                    data = inventory;
+                }
+            }
+            pulsesList.Remove(data);
+            Display(pulsesList);
         }
         public void Display(List<InventoryData> list)
         {
