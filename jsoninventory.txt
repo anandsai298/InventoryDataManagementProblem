@@ -1,0 +1,29 @@
+program.cs
+using OOPsProblemStatement.InventoryDataManagement;
+using System;
+namespace OOPsProblemStatement
+{
+    class program
+    {
+        public static void Main(String[] args)
+        {
+
+[
+  {
+    "Name": "Rice",
+    "Weight": "20",
+    "PricePerKg": "10"
+  },
+  {
+    "Name": "Pulses",
+    "Weight": "20",
+    "PricePerKg": "5"
+  },
+  {
+    "Name": "Wheat",
+    "Weight": "20",
+    "PricePerKg": "20"
+  }
+]
+
+pay_LSHMXO687MbW5s PAYMENT_EMI
