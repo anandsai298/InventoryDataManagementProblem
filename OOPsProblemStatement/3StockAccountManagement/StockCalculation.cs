@@ -11,7 +11,7 @@ namespace OOPsProblemStatement.StockAccountManagement
 {
     public class StockCalculation
     {
-        public void ReadJsonfile(string filePath)
+        public void ReadStockfile(string filePath)
         {
             var data=File.ReadAllText(filePath);
             var result=JsonConvert.DeserializeObject<List<StockData>>(data);
